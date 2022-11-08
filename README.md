@@ -47,6 +47,14 @@ ln -s /VOCdevkit/VOC2012 data/voc/VOC2012
 ```
 Please put proposals into `selevtive_search_data` folder and put vgg16_caffe.pth into `pretrained_model` folder.
 ### 4. Training and testing
+Evaluating the released model:
+```
+CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
+  --dataset voc2007test \
+  --cfg configs/baselines/vgg16_voc2007.yaml \
+  --load_ckpt Outputs/vgg16_voc2007/$model_path \
+  --vis False
+```
 
 
 ### 5.Known issues

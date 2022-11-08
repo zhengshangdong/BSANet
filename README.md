@@ -55,6 +55,7 @@ CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
   --load_ckpt Outputs/vgg16_voc2007/$model_path \
   --vis False
 ```
+Detection results will be dumped in the `Outputs/vgg16_voc2007/$model_path/test` folder. You can set --vis to True to visualize the detection results.
 
 
 ### 5.Known issues

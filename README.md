@@ -24,10 +24,10 @@ $VOC2007/JPEGImages
 $VOC2007/VOCdevkit
 ```
 ```
-$VOC2007/                           
-$VOC2007/annotations
-$VOC2007/JPEGImages
-$VOC2007/VOCdevkit
+$MSCOCO/                           
+$MSCOCO/annotations
+$MCSOSO/train2014
+$MSCOCO/val2014
 ```
 
 ### 3. Training and testing

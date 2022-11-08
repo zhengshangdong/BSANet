@@ -55,8 +55,22 @@ CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
   --load_ckpt Outputs/vgg16_voc2007/$model_path \
   --vis False
 ```
-Detection results will be dumped in the `Outputs/vgg16_voc2007/$model_path/test` folder. You can set --vis to True to visualize the detection results.
-
+Detection results will be dumped in the `Outputs/vgg16_voc2007/$model_path/test` folder. You can set `--vis` to `True` to visualize the detection results.  
+Training your model:
+```
+CUDA_VISIBLE_DEVICES=0 python tools/train_net_step.py \
+  --dataset voc2007 \
+  --cfg configs/baselines/vgg16_voc2007.yaml \
+  --bs 1
+```
+or
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3 python tools/train_net_step.py \
+  --dataset voc2007 \
+  --cfg configs/baselines/vgg16_voc2007.yaml \
+  --bs 1
+```
+Note that
 
 ### 5.Known issues
 1. Since the VOC2007 dataset is very small, the performance on VOC2007 is not stable. Please re-training our methods on VOC2012 or MS-COCO to verify the performance of BSDN. 

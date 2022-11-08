@@ -49,8 +49,16 @@ Please put proposals into `selevtive_search_data` folder and put vgg16_caffe.pth
 ### 4. Training and testing
 Evaluating the released model:
 ```
+# mAP
 CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
   --dataset voc2007test \
+  --cfg configs/baselines/vgg16_voc2007.yaml \
+  --load_ckpt Outputs/vgg16_voc2007/$model_path \
+  --vis False
+  
+# CorLoc
+CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
+  --dataset voc2007trainval \
   --cfg configs/baselines/vgg16_voc2007.yaml \
   --load_ckpt Outputs/vgg16_voc2007/$model_path \
   --vis False

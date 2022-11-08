@@ -34,15 +34,17 @@ All the proposals and models can be downloaded from [link1](https://baidu.com) o
 Create symlinks
 ```
 mkdir data
+mkdir selevtive_search_data
 cd data
 ln -s /MSCOCO/annotations data/coco/annotations
 ln -s /MSCOCO/train2014 data/coco/train2014
 ln -s /MSCOCO/val2014 data/coco/val2014
 ```
 ```
-ln -s /VOCdevkit/VOC2007 datasets/voc/VOC2007
-ln -s /VOCdevkit/VOC2012 datasets/voc/VOC2012
+ln -s /VOCdevkit/VOC2007 data/voc/VOC2007
+ln -s /VOCdevkit/VOC2012 data/voc/VOC2012
 ```
+
 ### 4. Training and testing
 
 

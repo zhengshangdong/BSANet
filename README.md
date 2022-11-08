@@ -9,7 +9,9 @@ NVIDIA GTX 3090Ti (24G of memory) is OK
 
 ### 2. Installation
 1. Clone the BSDN repository  
-`git clone https://github.com/zhengshangdong/BSDN.git`  
+```
+git clone https://github.com/zhengshangdong/BSDN.git
+```  
 2. Install libraries  
 See [install.sh](https://github.com/zhengshangdong/BSDN/blob/master/install.sh)
 

@@ -70,7 +70,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python tools/train_net_step.py \
   --cfg configs/baselines/vgg16_voc2007.yaml \
   --bs 1
 ```
-Note that the current implementation does not support multi-gpu testing and only support DataParallel (not DistributedDataParallel) based multi-gpu training. In our experiments, training a BSDN model needs ~12 hours, ~24 hours, and 10 days for VOC 2007, 2012, and MS-COCO dataset on one GPU.
+Note that the current implementation does not support multi-gpu testing and only support DataParallel (not DistributedDataParallel) based multi-gpu training. In our experiments, training a BSDN model needs ~12 hours, ~24 hours, and ~10 days for VOC 2007, 2012, and MS-COCO dataset on one GPU. When we use 4 3090 GPUs, training a BSDN model on MS-COCO needs ~4.5 days. 
 
 ### 5.Known issues
 1. Since the VOC2007 dataset is very small, the performance on VOC2007 is not stable. Please re-training our methods on VOC2012 or MS-COCO to verify the performance of BSDN. 

@@ -29,11 +29,12 @@ $MSCOCO/annotations
 $MCSOSO/train2014
 $MSCOCO/val2014
 ```
-All the proposals and models can be downloaded from [link1](https://baidu.com) or [link2](https://baidu.com). Please put the proposals into the corresponding `annotations` folder.  
+All the annotations, proposals, and models can be downloaded from [link1](https://baidu.com) or [link2](https://baidu.com). Please put the annotations into the corresponding `annotations` folder.  
 
 Create symlinks
 ```
 mkdir data
+mkdir pretrained_model
 mkdir selevtive_search_data
 cd data
 ln -s /MSCOCO/annotations data/coco/annotations
@@ -44,7 +45,7 @@ ln -s /MSCOCO/val2014 data/coco/val2014
 ln -s /VOCdevkit/VOC2007 data/voc/VOC2007
 ln -s /VOCdevkit/VOC2012 data/voc/VOC2012
 ```
-
+Please put proposals into `selevtive_search_data` folder and put vgg16_caffe.pth into `pretrained_model` folder.
 ### 4. Training and testing
 
 

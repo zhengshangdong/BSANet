@@ -13,10 +13,14 @@ NVIDIA GTX 3090Ti (24G of memory) is OK
 2. Install libraries  
 See [install.sh](https://github.com/zhengshangdong/BSDN/blob/master/install.sh)
 
-### 3. Data  
-`wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar`
-`wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar`
-`wget http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCdevkit_18-May-2011.tar`  
+### 3. Datasets  
+Download VOC2007, 2012, and MS-COCO datasets and use the following basic structure to organize these data
+```
+$VOC2007/                           
+$VOC2007/annotations
+$VOC2007/JPEGImages
+$VOC2007/VOCdevkit
+```
 
 ### 3. Training and testing
 

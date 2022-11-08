@@ -29,7 +29,7 @@ $MSCOCO/annotations
 $MCSOSO/train2014
 $MSCOCO/val2014
 ```
-All the proposals can be downloaded from [link1](https://baidu.com), [link2](https://baidu.com)  
+All the proposals can be downloaded from [link1](https://baidu.com) or [link2](https://baidu.com). Please put the proposals into the corresponding `annotations` folder.
 
 ### 3. Training and testing
 

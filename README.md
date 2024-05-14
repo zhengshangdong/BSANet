@@ -49,6 +49,11 @@ Evaluating the released model:
 ```
 Please change `ITERS` in the aforementioned `.sh` files to train and test the correct models.
 
-### 5.Acknowledgement
+### 5.Our models
+NWPU [T=7](www.baidu.com)
+
+DIOR [T=1](www.baidu.com)
+
+### 6.Acknowledgement
 We borrowed code from [RINet](https://github.com/XiaoxFeng/RINet). Thanks so much for this excellent work.
 

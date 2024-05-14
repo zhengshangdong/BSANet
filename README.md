@@ -1,14 +1,12 @@
-# BSDN: Context-Aware Bidirectional Spatial Dropout Network for Weakly-Supervised Object Detection
-This is a PyTorch implementation of our BSDN.
+# BSANet: Data-Driven Bidirectional Spatial-Adaptive Network for Weakly Supervised Object Detection in Remote Sensing Images
+This is a PyTorch implementation of our BSANet.
 
 ## Contents
 ### 1. Hardwares
-NVIDIA GTX 1080Ti (11G of memory) is OK  
-NVIDIA GTX 2080Ti (11G of memory) is OK  
-NVIDIA GTX 3090 (24G of memory) is OK  
+NVIDIA GTX 1080Ti, 2080Ti, 3090 are OK  
 
 ### 2. Installation
-1. Clone the BSDN repository  
+1. Clone the BSANet repository  
 ```
 git clone https://github.com/zhengshangdong/BSDN.git
 ```  

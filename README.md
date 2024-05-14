@@ -13,7 +13,7 @@ git clone https://github.com/zhengshangdong/BSANet.git
 2. Install libraries  
 See [install.sh](https://github.com/zhengshangdong/BSDN/blob/master/install.sh)
 
-3. Our method is built upon RINet ([RINet](https://github.com/XiaoxFeng/RINet)), you can also install RINet and replace the specifical files to run our BSANet.
+3. Our method is built upon [RINet](https://github.com/XiaoxFeng/RINet), you can also install RINet and replace the specifical files to run our BSANet.
 
 ### 3. Datasets  
 Download NWPU and DIOR datasets and use the following basic structure to organize these data
@@ -47,23 +47,8 @@ Evaluating the released model:
 # testing for CorLoc
 ./experiments/scripts/test_faster_rcnn_corloc.sh 0 pascal_voc vgg16
 ```
-Detection results will be dumped in the `Outputs/vgg16_voc2007/$model_path/test` folder. You can set `--vis` to `True` to visualize the detection results.  
-Training your model:
-```
-CUDA_VISIBLE_DEVICES=0 python tools/train_net_step.py \
-  --dataset voc2007 \
-  --cfg configs/baselines/vgg16_voc2007.yaml \
-  --bs 1
-```
-or
-```
-CUDA_VISIBLE_DEVICES=0,1,2,3 python tools/train_net_step.py \
-  --dataset voc2007 \
-  --cfg configs/baselines/vgg16_voc2007.yaml \
-  --bs 1
-```
-Note that the current implementation does not support multi-gpu testing and only support DataParallel (not DistributedDataParallel) based multi-gpu training. In our experiments, training a BSDN model needs ~12 hours, ~24 hours, and ~10 days for VOC 2007, 2012, and MS-COCO dataset on one GPU. When we use four 3090 GPUs, training a BSDN model on MS-COCO needs ~4.5 days. 
+Please change `ITERS` in the aforementioned `.sh` files to train and test the correct models.
 
-### 5.Known issues
-1. Since the VOC2007 dataset is very small, the performance on VOC2007 is not stable. Please re-training our methods on VOC2012 or MS-COCO to verify the performance of BSDN. 
-2. The best results of VOC datasets usually are not achieved in the last epoch. Please save the intermediate models. You can also set the random seed SEED. Note that setting SEED to a fixed value still cannot guarantee deterministic behavior.
+### 5.Acknowledgement
+We borrowed code from [RINet](https://github.com/XiaoxFeng/RINet). Thanks so much for this excellent work.
+

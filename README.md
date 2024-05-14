@@ -8,58 +8,44 @@ NVIDIA GTX 1080Ti, 2080Ti, 3090 are OK
 ### 2. Installation
 1. Clone the BSANet repository  
 ```
-git clone https://github.com/zhengshangdong/BSDN.git
-```  
+git clone https://github.com/zhengshangdong/BSANet.git
+```
 2. Install libraries  
 See [install.sh](https://github.com/zhengshangdong/BSDN/blob/master/install.sh)
 
-### 3. Datasets  
-Download VOC2007, 2012, and MS-COCO datasets and use the following basic structure to organize these data
-```
-$VOC2007/                           
-$VOC2007/annotations
-$VOC2007/JPEGImages
-$VOC2007/VOCdevkit
-```
-```
-$MSCOCO/                           
-$MSCOCO/annotations
-$MCSOSO/train2014
-$MSCOCO/val2014
-```
-All the annotations, proposals, and models can be downloaded from [link1](https://baidu.com) or [link2](https://baidu.com). Please put the annotations into the corresponding `annotations` folder.  
+3. Our method is built upon RINet ([RINet](https://github.com/XiaoxFeng/RINet)), you can also install RINet and replace the specifical files to run our BSANet.
 
-Create symlinks
+### 3. Datasets  
+Download NWPU and DIOR datasets and use the following basic structure to organize these data
 ```
-mkdir data
-mkdir pretrained_model
-mkdir selevtive_search_data
-cd data
-ln -s /MSCOCO/annotations data/coco/annotations
-ln -s /MSCOCO/train2014 data/coco/train2014
-ln -s /MSCOCO/val2014 data/coco/val2014
+$NWPUV2/                           
+$VOC2007/Annotations
+$VOC2007/JPEGImages
+$VOC2007/ImageSets
 ```
 ```
-ln -s /VOCdevkit/VOC2007 data/voc/VOC2007
-ln -s /VOCdevkit/VOC2012 data/voc/VOC2012
+$DIOR/                           
+$VOC2007/Annotations
+$VOC2007/ImageSets
+$VOC2007/JPEGImages
 ```
-Please put proposals into `selevtive_search_data` folder and put vgg16_caffe.pth into `pretrained_model` folder.
+All the datasets can be downloaded from [NWPU](https://drive.google.com/file/d/15xd4TASVAC2irRf02GA4LqYFbH7QITR-/view?usp=sharing) and [DIOR](https://drive.google.com/drive/folders/1UdlgHk49iu6WpcJ5467iT-UqNPpx__CC). 
+
+Download selective search proposals from [NWPU](https://drive.google.com/file/d/1VnmUDPomgTgmHvH3CemFOIWTLuVR5f-t/view?usp=sharing) and [DIOR](https://drive.google.com/file/d/1wbivkAxqBQB4vAX0APmVzIOhuawHpsPV/view?usp=sharing), and put it in the data/selective_search_data/
+
+Download pretrained ImageNet weights from [here](https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ), and put it in the data/imagenet_weights/
+
 ### 4. Training and testing
 Evaluating the released model:
 ```
-# mAP
-CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
-  --dataset voc2007test \
-  --cfg configs/baselines/vgg16_voc2007.yaml \
-  --load_ckpt Outputs/vgg16_voc2007/$model_path \
-  --vis False
-  
-# CorLoc
-CUDA_VISIBLE_DEVICES=0 python tools/test_net.py \
-  --dataset voc2007trainval \
-  --cfg configs/baselines/vgg16_voc2007.yaml \
-  --load_ckpt Outputs/vgg16_voc2007/$model_path \
-  --vis False
+# training
+./experiments/scripts/train_faster_rcnn.sh 0 pascal_voc vgg16
+
+# testing for mAP
+./experiments/scripts/test_faster_rcnn.sh 0 pascal_voc vgg16
+
+# testing for CorLoc
+./experiments/scripts/test_faster_rcnn_corloc.sh 0 pascal_voc vgg16
 ```
 Detection results will be dumped in the `Outputs/vgg16_voc2007/$model_path/test` folder. You can set `--vis` to `True` to visualize the detection results.  
 Training your model:

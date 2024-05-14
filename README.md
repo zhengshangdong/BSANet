@@ -49,10 +49,11 @@ Evaluating the released model:
 ```
 Please change `ITERS` in the aforementioned `.sh` files to train and test the correct models.
 
-### 5.Our models
-NWPU [T=7](www.baidu.com)
+### 5.Downloading models and modifying the corresponding
+Dowload NWPU [T=7](www.baidu.com) and put it in the output/vgg16/voc_2007_trainval/default/. Please modify `T=7` in `FFE.py`, `self._classes` for NWPU in `pascal_voc.py`
 
-DIOR [T=1](www.baidu.com)
+Dowload DIOR [T=1](www.baidu.com) and put it in the output/vgg16/voc_2007_trainval/default/. Please modify `T=1` in `FFE.py`, `self._classes` for DIOR in `pascal_voc.py`
+
 
 ### 6.Acknowledgement
 We borrowed code from [RINet](https://github.com/XiaoxFeng/RINet). Thanks so much for this excellent work.

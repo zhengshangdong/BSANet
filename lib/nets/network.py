@@ -37,7 +37,6 @@ import tensorboardX as tb
 from scipy.misc import imresize
 from FFE.FFE import FFE
 from FFE.ATT import SpatialAttention
-from FFE.relation import roi_relation
 
 class Network(nn.Module):
   def __init__(self):

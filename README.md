@@ -37,7 +37,7 @@ All the datasets can be downloaded from [NWPU](https://drive.google.com/file/d/1
 
 Download selective search proposals from [NWPU](https://drive.google.com/file/d/1VnmUDPomgTgmHvH3CemFOIWTLuVR5f-t/view?usp=sharing) and [DIOR](https://drive.google.com/file/d/1wbivkAxqBQB4vAX0APmVzIOhuawHpsPV/view?usp=sharing), and put it in the data/selective_search_data/
 
-Download pretrained ImageNet weights from [here](https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ), and put it in the data/imagenet_weights/
+Download pretrained ImageNet weights from [here](https://pan.baidu.com/s/1035ZNsM2LzAvoCyAOnfMCw) （1234）, and put it in the data/imagenet_weights/
 
 ### 4. Training and testing
 Evaluating the released model:

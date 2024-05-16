@@ -11,7 +11,7 @@ NVIDIA GTX 1080Ti, 2080Ti, 3090 are OK
 git clone https://github.com/zhengshangdong/BSANet.git
 ```
 2. Install libraries  
-See [install.sh](https://github.com/zhengshangdong/BSDN/blob/master/install.sh)
+See `requirements.yaml`
 
 3. Our method is built upon [RINet](https://github.com/XiaoxFeng/RINet), you can also install RINet and replace the specifical files to run our BSANet.
 

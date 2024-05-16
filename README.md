@@ -12,10 +12,11 @@ git clone https://github.com/zhengshangdong/BSANet.git
 ```
 2. Install libraries  
 See `requirements.yaml`
-```
+
 cd BSANet/lib
+
 bash make.sh
-```
+
 
 
 3. Our method is built upon [RINet](https://github.com/XiaoxFeng/RINet), you can also install RINet and replace the specifical files to run our BSANet.

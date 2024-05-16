@@ -54,9 +54,9 @@ Evaluating the released model:
 Please change `ITERS` in the aforementioned `.sh` files to train and test the correct models.
 
 ### 5.Downloading models and modifying the corresponding
-Dowload NWPU [T=7](www.baidu.com) and put it in the output/vgg16/voc_2007_trainval/default/. Please modify `T=7` in `FFE.py`, `self._classes` for NWPU in `pascal_voc.py` and use the defalult `network.py`
+Dowload NWPU [T=7](https://pan.baidu.com/s/16b0PUzPsLNfAPzZRIgA70g) (1234) and put it in the output/vgg16/voc_2007_trainval/default/. Please modify `T=7` in `FFE.py`, `self._classes` for NWPU in `pascal_voc.py` and use the defalult `network.py`
 
-Dowload DIOR [T=1](www.baidu.com) and put it in the output/vgg16/voc_2007_trainval/default/. Please modify `T=1` in `FFE.py`, `self._classes` for DIOR in `pascal_voc.py` and rename the `network_dior.py` to `network.py`
+Dowload DIOR [T=1](https://pan.baidu.com/s/10xbHAChrzhA_-gi5u3Pcjw) (1234) and put it in the output/vgg16/voc_2007_trainval/default/. Please modify `T=1` in `FFE.py`, `self._classes` for DIOR in `pascal_voc.py` and rename the `network_dior.py` to `network.py`
 
 
 ### 6.Acknowledgement
